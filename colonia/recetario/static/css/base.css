@@ -1,0 +1,28 @@
+/* algunos ejemplos con CSS */
+<meta name="viewport" content="width=device-width"/>
+body, header, footer, div, h1, h2, ul, li, a { 
+	margin:0; padding:0;
+}
+header {
+	text-align: center;
+	background-color:#008500;
+	color:#000000;
+	background-image: url("p.png"); 
+	
+}
+nav ul li a{
+	text-decoration:none;
+	color:#b00b1e;
+	margin:10px;
+	font-weight: bold;
+}
+.activo { 
+  font-weight: bold; 
+
+}
+.impar { 
+	background-color:#90EE90; 
+}
+.par { 
+	background-color:#5ACC5A; 
+}

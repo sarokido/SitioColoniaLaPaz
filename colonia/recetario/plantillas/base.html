@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang='es'>
+<head>
+  <meta charset='utf-8'>
+  <meta name="viewport" content="width=device-width"/>
+  <title>Noticias- {% block titulo %}{% endblock %}</title>
+  <link rel='stylesheet' href='{{STATIC_URL}}css/base.css'> 
+  <link rel='shortcut icon' href='{{STATIC_URL}}img/icono.png'>
+  {% block style_css %}{% endblock %}
+  <script src='{{STATIC_URL}}js/jquery-1.7.2.min.js'></script>
+  <script src='{{STATIC_URL}}js/demo.js'></script>
+</head>
+<body>
+<BODY BGCOLOR="#b7b8b0">
+  <header>
+	{% block encabezado %}{% endblock %}
+	<nav>
+	  <table width="1000" height="78" border="0" align="center" bordercolor="#DAE5F8">
+        <tr>
+          <td width="100" align="center" bgcolor="">
+              <div align="left">
+                <ul id='menu'>
+                  <li><a href='/historia'>Historia</a></li>
+                </ul>
+          </div></td>
+		  
+          <td width="118"><div align="left">
+            <ul id='menu'>
+              <li>
+          <a href='/organigrama'>Organigrama</a></td>
+		  
+          <td width="93">
+              <div align="left">
+                <ul id='menu'>
+                  <li><a href='/recetas'>Noticias</a></li>
+                </ul>
+          </div></td>
+		  
+          <td width="106">
+              <div align="left">
+                <ul id='menu'>
+                  <li><a href="/comenta">Comenta</a></li>
+                </ul>
+          </div></td>
+		  
+          <td width="154">
+              <div align="left">
+                <ul id='menu'>
+                  <li><a href='/acerca'>Acerca del Municipio</a></li>
+                </ul>
+          </div></td>
+		  
+          <td width="121">
+              <div align="left">
+                <ul id='menu'>
+                  <li><a href="/contacto">Contactanos</a></li>
+                </ul>
+          </div></td>
+		  
+          <td width="120"><div align="left">
+            <ul id='menu'>
+              <li>
+                <a href='/usuario/nuevo'>Cultura y tradicion</a></li>
+            </ul>
+          </div></td>
+        </tr>
+      </table>
+    </nav>
+	<hr>
+</header>	
+  <section class='contenido'>
+	{% block contenido %}{% endblock %}
+  </section>
+  <footer>
+	<p align="center">&nbsp;</p>
+	<p align="center">&nbsp;</p>
+	<p align="center">Proyecto de  Django de los Alumnos del TESI del Web &copy;2016</p>
+  </footer>
+</body>
+</html>

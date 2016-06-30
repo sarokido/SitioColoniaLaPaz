@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block titulo %} {{receta.titulo}} {% endblock %}
+
+{% block encabezado %} 
+  <h1>{{receta.titulo|title}}</h1>
+{% endblock %}
+
+{% block contenido %}
+	<div id='preparacion'>
+		<h2 align="center">Noticia</h2>
+		<p align="center">{{receta.preparacion}}</p>
+	</div>
+	<div id='referencia'>
+		<div align="center"><img src='{{MEDIA_URL}}{{receta.imagen}}'>
+		      </div>
+	</div>
+	<div id='comentarios'>
+		<h2 align="center">Comentarios</h2>
+			<div align="center">{% for item in comentarios %}
+				</div>
+			<p align="center">{{item.texto}}</p>
+			<div align="center">{% empty %}
+				</div>
+			<p align="center">Sin comentarios registrados</p>
+			<div align="center">{% endfor %}
+	        </div>
+	</div>
+	<footer>
+	  <p align="center">Registrado {{ receta.tiempo_registro|date:'SHORT_DATETIME_FORMAT' }} por {{receta.usuario}}</p>
+	</footer>
+{% endblock %}

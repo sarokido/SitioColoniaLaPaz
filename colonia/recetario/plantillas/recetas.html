@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block titulo %} Noticias registradas {% endblock %}
+
+{% block css %}
+  <style>
+	img { width:50px; }
+  </style>
+{% endblock %}
+
+
+{% block encabezado %}
+  <h1>NOTICIAS DEL MUNICIPIO </h1>
+  <p>{% endblock %}
+    
+    {% block contenido %}</p>
+  <p>&nbsp;</p>
+  <p><a href="/receta/nueva">Agregar una noticia </a></p>
+<ul>
+	<div align="center">{% for dato in datos %}
+	</div>
+	<li>
+		<div align="center"><a href='{% url principal.views.detalle_receta dato.id %}'>{{dato.titulo}}</a></div>
+	</li>
+</ul>
+<p align="center"><img src='{{MEDIA_URL}}{{dato.imagen}}' /></p>
+<div align="center">
+  <ul>
+    <li></li>
+    {% empty %}
+    <li>Aún no hay noticias registradas</li>
+    {% endfor %}
+  </ul>
+</div>
+<ul>
+</ul>
+{% endblock %}
